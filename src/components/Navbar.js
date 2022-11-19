@@ -1,72 +1,55 @@
 // Handles navbar for the app
 import React from 'react';
-import profilePic from '../images/pro-pic.jpeg'; // Tell webpack this JS file uses this image
+import profilePic from '../images/pro-pic.jpeg';
 
-export default class Navbar extends React.Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      showPopup: false
-    };
-    this.togglePopup = this.togglePopup.bind(this);
-  }
-
-  togglePopup = () => this.setState({ showPopup: !this.state.showPopup })
-
-  render() {
-    return (
-      <nav className="bg-gray-700 text-white">
-          <div className="mx-auto max-w-5xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
-                  <div className="flex flex-row items-center justify-center">
-                      <h1 className="font-bold text-xl">Rubum</h1><span className="text-xs pt-1.5">.dev</span>
-                  </div>
-                </div>
+export default function Navbar() {
+  return (
+    <nav className="bg-gray-700 text-white">
+      <div className="mx-auto max-w-5xl px-2 sm:px-6 lg:px-8">
+        <div className="relative flex h-16 items-center justify-between">
+          <button type="button" class="inline-flex items-center pl-1 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            <svg class="w-8 h-8" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+          {/* <div class="sm:hidden w-full sm:block sm:w-auto" id="navbar-default">
+            <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+              </li>
+            </ul>
+          </div> */}
+          <div className="mr-9 flex flex-auto items-center justify-center sm:justify-start">
+            <h1 className="font-bold text-gray-100 text-l">Rubum</h1><span className="text-xs pt-1 text-green-100">.dev</span>
+          </div>
+          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <div className="hidden sm:ml-6 sm:mr-6 sm:block">
+              <div className="flex space-x-4">
+                <a href="#" className="bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">About</a>
+                <a href="#" className="text-green-100 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Stack</a>
+                <a href="#" className="text-green-100 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+                <a href="#" className="text-green-100 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <div className="hidden sm:ml-6 sm:mr-6 sm:block">
-                  <div className="flex space-x-4">
-                    <a href="#" className="bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
-                    <a href="#" className="text-gray-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Stack</a>
-                    <a href="#" className="text-gray-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-                    <a href="#" className="text-gray-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contacts</a>
-                  </div>
-                </div>
-  
-                {/* Profile dropdown */}
-                <div className="relative ml-5">
-                  <div>
-                    <button type="button" className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                      <span className="sr-only">Open user menu</span>
-                      <img onClick={this.togglePopup} className="h-10 w-10 rounded-full" src={profilePic} alt="Profile picture"/>
-                    </button>
-                  </div>
-  
-                  {/*
-                    Dropdown menu, show/hide based on menu state.
-  
-                    Entering: "transition ease-out duration-100"
-                      From: "transform opacity-0 scale-95"
-                      To: "transform opacity-100 scale-100"
-                    Leaving: "transition ease-in duration-75"
-                      From: "transform opacity-100 scale-100"
-                      To: "transform opacity-0 scale-95"
-                  */}
-  
-                  <div style={{display: (this.state.showPopup ? 'initial' : 'none')}}
-                    className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1">
-                    {/* Active: "bg-gray-100", Not Active: "" */}
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-0">Your Profile</a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-1">Settings</a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</a>
-                  </div>
-                </div>
+            </div>
+
+            <div className="relative ml-5">
+              <div type="button" className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <img className="h-12 w-12 rounded-full" src={profilePic} alt="Profile picture"/>
               </div>
             </div>
           </div>
-      </nav>
-    )
-  }
+        </div>
+      </div>
+    </nav>
+  )
 };
