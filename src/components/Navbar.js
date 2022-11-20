@@ -1,4 +1,5 @@
-// Handles navbar for the app
+// Handles navigations for the app
+
 import React from 'react';
 import profilePic from '../images/pro-pic.jpeg';
 
@@ -8,7 +9,7 @@ export default class Navbar extends React.Component {
     this.state = {
       showMenu: false
     }
-    
+
     this.toggleMenu = this.toggleMenu.bind(this)
   }
 
@@ -24,19 +25,19 @@ export default class Navbar extends React.Component {
             <button onClick={this.toggleMenu} type="button" className="inline-flex items-center text-sm text-gray-500 sm:hidden hover:bg-gray-100 focus:outline-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
               <svg className="w-8 h-8" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
             </button>
-            <div className="w-full absolute top-11 z-10" style={{display: this.state.showMenu ? 'block' : 'none'}}>
+            <div className="w-full absolute top-11 z-10" style={{ display: this.state.showMenu ? 'block' : 'none' }}>
               <ul className="flex flex-col p-3 mt-4 border border-gray-100 rounded-lg rounded-t-none bg-gray-50 dark:bg-gray-700 dark:border-gray-700">
-                <li> 
-                  <a onClick={this.toggleMenu} href="#about" className="block py-2 pl-3 pr-4 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">About</a>
+                <li>
+                  <a onClick={this.toggleMenu} href="/about" className="block py-2 pl-3 pr-4 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">About</a>
                 </li>
                 <li>
-                  <a onClick={this.toggleMenu} href="#stack" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Stack</a>
+                  <a onClick={this.toggleMenu} href="/stack" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Stack</a>
                 </li>
                 <li>
-                  <a onClick={this.toggleMenu} href="#portfolio" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Portfolio</a>
+                  <a onClick={this.toggleMenu} href="/portfolio" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Portfolio</a>
                 </li>
                 <li>
-                  <a onClick={this.toggleMenu} href="#contact" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                  <a onClick={this.toggleMenu} href="/contact" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
                 </li>
               </ul>
             </div>
@@ -46,16 +47,16 @@ export default class Navbar extends React.Component {
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <div className="hidden sm:ml-6 sm:mr-6 sm:block">
                 <div className="flex space-x-4">
-                  <a href="#about" className="bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">About</a>
-                  <a href="#stack" className="text-blue-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Stack</a>
-                  <a href="#portfolio" className="text-blue-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
-                  <a href="#contact" className="text-blue-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                  <a href="/about" className="bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">About</a>
+                  <a href="/stack" className="text-blue-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Stack</a>
+                  <a href="/portfolio" className="text-blue-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+                  <a href="/contact" className="text-blue-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                 </div>
               </div>
-  
+
               <div className="relative ml-5">
                 <div type="button" className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                  <img className="h-12 w-12 rounded-full" src={profilePic} alt="Profile picture"/>
+                  <img className="h-12 w-12 rounded-full" src={profilePic} alt="Profile picture" />
                 </div>
               </div>
             </div>
