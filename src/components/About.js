@@ -2,6 +2,7 @@
 import '../css/App.css';
 import cogLogo from '../images/cog.svg';
 import codeScreen from '../images/code-screen.png';
+import { useLocation } from "react-router-dom";
 
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -9,7 +10,7 @@ import Footer from './Footer';
 export default function About() {
 	return (
 		<div>
-			<Navbar />
+			<Navbar location={useLocation()}/>
 			<div className='px-4 app-body mx-auto max-w-5xl px-2 pt-2 sm:px-6 lg:px-8'>
 				<div className='my-1'>
 					<h2 className='text-xl pt-3 pb-10 text-gray-500 tracking-wide'> Hi, I'm <span className='text-gray-500 font-bold'>Kenneth Mburu</span></h2>
