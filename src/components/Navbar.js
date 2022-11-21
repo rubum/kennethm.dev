@@ -3,10 +3,10 @@
 import React from 'react';
 import profilePic from '../images/pro-pic.jpeg';
 
-let webActiveLink = 'bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium';
-let webInactiveLink = 'text-blue-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium';
-let mobiActiveLink = 'block py-2 pl-3 pr-4 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white';
-let mobiInactiveLink = 'block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent';
+const webActiveLink = 'bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium';
+const webInactiveLink = 'text-blue-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium';
+const mobiActiveLink = 'block py-2 pl-3 pr-4 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white';
+const mobiInactiveLink = 'block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent';
 
 export default class Navbar extends React.Component {
   constructor(props) {
@@ -31,7 +31,7 @@ export default class Navbar extends React.Component {
   }
 
   classNameByPath(path, activeClassName, inActiveClassName) {
-    if (path === '/') {
+    if (path === '/' && (['/', '/about'].includes(this.props.location.pathname))) {
       return activeClassName
     } else if (path === this.props.location.pathname) {
       return activeClassName
@@ -51,7 +51,7 @@ export default class Navbar extends React.Component {
             <div className="w-full absolute top-11 z-10" style={{ display: this.state.showMenu ? 'block' : 'none' }}>
               <ul className="flex flex-col p-3 mt-4 border border-gray-100 rounded-lg rounded-t-none bg-gray-50 dark:bg-gray-700 dark:border-gray-700">
                 <li>
-                  <a onClick={this.toggleMenu} href="/about" className={this.mobiClassNameByPath('/about')}>About</a>
+                  <a onClick={this.toggleMenu} href="/about" className={this.mobiClassNameByPath('/')}>About</a>
                 </li>
                 <li>
                   <a onClick={this.toggleMenu} href="/stack" className={this.mobiClassNameByPath('/stack')}>Stack</a>
@@ -70,7 +70,7 @@ export default class Navbar extends React.Component {
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <div className="hidden sm:ml-6 sm:mr-6 sm:block">
                 <div className="flex space-x-4">
-                  <a href="/about" className={this.webClassNameByPath('/about')} aria-current="page">About</a>
+                  <a href="/about" className={this.webClassNameByPath('/')} aria-current="page">About</a>
                   <a href="/stack" className={this.webClassNameByPath('/stack')}>Stack</a>
                   <a href="/portfolio" className={this.webClassNameByPath('/portfolio')}>Portfolio</a>
                   <a href="/contact" className={this.webClassNameByPath('/contact')}>Contact</a>
