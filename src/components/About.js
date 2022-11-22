@@ -13,7 +13,7 @@ export default function About() {
 		<div>
 			<Navbar location={useLocation()} />
 			<div className='px-5 mx-auto max-w-5xl px-2 pt-2 sm:px-6 lg:px-8'>
-				<div className='mt-1'>
+				<div className='mt-1 px-3'>
 					<h2 className='text-xl pt-3 pb-10 text-gray-500 tracking-wide'><span className='text-lg'>&#128075;</span> Hi. I'm <span className='text-gray-500 font-bold'>Kenneth Mburu</span></h2>
 					<div className='flex flex-row max-h-20 justify-between items-center border-solid border-4 rounded-full border-blue-200 bg-gray-100'>
 						<img src={cogLogo} className='App-logo max-h-20' />
