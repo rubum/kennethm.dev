@@ -23,7 +23,7 @@ export default function About() {
 
 					<h3 className='text-medium font-bold mt-10 text-gray-500 underline'><i className="fa-solid fa-briefcase pr-3"></i>What I do</h3>
 					<div className='md:flex pt-3'>
-						<div className='md:max-w-md md:pr-2 text-normal'>
+						<div className='md:w-full md:pr-2 text-normal'>
 							<p>
 								I work on the <b>frontend</b> and <b>backend</b> parts of web apps. I love being the first user of the application/feature I'm developing, so I test a lot.
 							</p>
@@ -35,7 +35,7 @@ export default function About() {
 							<br />
 							<p>Among the web technologies I use include Elixir/Phoenix/LiveView, Python/Django, Rust/Rocket, JavaScript/Vuejs/Reactjs and Tailwindcss (this site is built with those).</p>
 						</div>
-						<div className='mt-5 md:mt-0 border border-gray-100 rounded w-full bg-gradient-to-br from-gray-50 to-blue-50'>
+						<div className='mt-5 md:w-full md:mt-0 border border-gray-100 rounded w-full bg-gradient-to-br from-gray-50 to-blue-50'>
 							<div className='grid grid-cols-2 gap-4'>
 								<a className='bg-gray-700 border border-gray-300 rounded-lg mt-3 ml-3 md:mt-5 md:ml-4 pt-2 whitespace-normal' href='https://github.com/rubum'>
 									<span className='pl-3 pb-3 md:pb-1 flex items-center text-white'>
