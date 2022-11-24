@@ -5,8 +5,8 @@ import profilePic from '../images/pro-pic.jpeg';
 
 const webActiveLink = 'bg-blue-500 text-white px-3 py-2 rounded-md text-sm font-medium';
 const webInactiveLink = 'text-blue-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium';
-const mobiActiveLink = 'block py-2 pl-3 pr-4 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-500 md:p-0 dark:text-white';
-const mobiInactiveLink = 'block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent';
+const mobiActiveLink = 'block py-2 pl-3 pr-4 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-500 md:p-0';
+const mobiInactiveLink = 'block py-2 pl-3 pr-4 text-gray-400 rounded hover:bg-gray-600 md:hover:bg-gray-100 md:border-0 md:hover:text-blue-700 md:p-0';
 
 export default class Navbar extends React.Component {
   constructor(props) {
@@ -45,11 +45,11 @@ export default class Navbar extends React.Component {
       <nav className="bg-gray-700 text-white">
         <div className="mx-auto max-w-5xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
-            <button onClick={this.toggleMenu} type="button" className="inline-flex items-center text-sm text-gray-500 sm:hidden hover:bg-gray-100 focus:outline-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            <button onClick={this.toggleMenu} type="button" className="inline-flex items-center text-sm text-gray-500 sm:hidden md:hidden hover:bg-gray-700 focus:outline-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
               <svg className="w-8 h-8" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
             </button>
             <div className="w-full absolute top-11 z-10" style={{ display: this.state.showMenu ? 'block' : 'none' }}>
-              <ul className="flex flex-col p-3 mt-4 border border-gray-100 rounded-lg rounded-t-none bg-gray-50 dark:bg-gray-700 dark:border-gray-700">
+              <ul className="flex flex-col p-3 mt-4 border border-gray-100 rounded-lg rounded-t-none bg-gray-700 border-gray-700">
                 <li>
                   <a onClick={this.toggleMenu} href="/about" className={this.mobiClassNameByPath('/')}>About</a>
                 </li>

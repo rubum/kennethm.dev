@@ -35,7 +35,8 @@ export default function About() {
 							<br />
 							<p>Among the web technologies I use include Elixir/Phoenix/LiveView, Python/Django, Rust/Rocket, JavaScript/Vuejs/Reactjs and Tailwindcss (this site is built with those).</p>
 						</div>
-						<div className='mt-5 md:w-full md:mt-0 border border-gray-100 rounded w-full bg-gradient-to-br from-gray-50 to-blue-50'>
+						<h4 className='mt-4 font-normal text-gray-400 underline sm:hidden'>View profiles and projects</h4>
+						<div className='mt-2 md:w-full md:mt-0 border border-gray-100 rounded w-full bg-gradient-to-br from-gray-50 to-blue-50'>
 							<div className='grid grid-cols-2 gap-4'>
 								<a className='bg-gray-700 border border-gray-300 rounded-lg mt-3 ml-3 md:mt-5 md:ml-4 pt-2 whitespace-normal' href='https://github.com/rubum'>
 									<span className='pl-3 pb-3 md:pb-1 flex items-center text-white'>
@@ -55,13 +56,13 @@ export default function About() {
 									<span className='pl-3 pb-3 md:pb-1 flex items-center text-white'>
 										<img src={timelineLogo} className="w-5 pr-2"></img><span className='font-medium'>Timeline</span>
 									</span>
-									<p className='hover:bg-gray-100 bg-white rounded-b-lg hidden md:block sm:block pt-3 pl-3 pb-3'>My current job as a full-stack engineer</p>
+									<p className='hover:bg-gray-100 bg-white rounded-b-lg hidden md:block sm:block pt-3 pl-3 pb-3'>Currnt job as a full-stack engineer</p>
 								</a>
 								<a className='bg-blue-800	border border-gray-300 rounded-lg mt-3 mb-3 mr-3 md:mt-5 md:mr-4 pt-2 whitespace-normal' href='https://valuechainfactory.com/'>
 									<span className='pl-3 pb-3 md:pb-1 flex items-center text-white'>
 										<img src={value8logo} className="w-5 pr-2"></img><span className='font-medium'>Value Chain</span>
 									</span>
-									<p className='hover:bg-gray-100 bg-white rounded-b-lg hidden md:block sm:block pt-3 pl-3 pb-3'>My former workplace as a full-stack engineer</p>
+									<p className='hover:bg-gray-100 bg-white rounded-b-lg hidden md:block sm:block pt-3 pl-3 pb-3'>Former workplace as a full-stack engineer</p>
 								</a>
 							</div>
 						</div>
