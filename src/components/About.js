@@ -25,18 +25,20 @@ export default function About() {
 					<div className='md:flex pt-3'>
 						<div className='md:w-full md:pr-2 text-normal'>
 							<p>
-								I work on the <b>frontend</b> and <b>backend</b> parts of web apps. I love being the first user of the application/feature I'm developing, so I test a lot.
+							I am proficient in both frontend and backend development for web applications. My approach involves actively engaging with both aspects of the application. 
+							A practice I particularly appreciate is assuming the role of the primary user for the feature or application in development. This approach facilitates 
+							rigorous testing and refinement, resulting in a polished end product.
 							</p>
 							<br />
 							<p>
-								Currently, I work for <a href='https://www.timeline.co/' className='text-blue-800'>Timeline</a> as a full-stack engineer, assisting in the development
+								Presently, I work for <a href='https://www.timeline.co/' className='text-blue-800'>Timeline</a> as a full-stack engineer, assisting in the development
 								of the innovative <a href='https://portfolios.timeline.co/' className='text-blue-600'>Portfolios</a> platform.
 							</p>
 							<br />
-							<p>Among the web technologies I use include Elixir/Phoenix/LiveView, Python/Django, Rust/Rocket, JavaScript/Vuejs/Reactjs and Tailwindcss (this site is built with those).</p>
+							<p>The web technologies I use/have used include Elixir/Phoenix/LiveView, Python/Django, Rust/Rocket, JavaScript/Vuejs/Reactjs and Tailwindcss.</p>
 						</div>
 						<h4 className='mt-4 font-normal text-gray-400 underline sm:hidden'>View profiles and projects</h4>
-						<div className='mt-2 md:w-full md:mt-0 border border-gray-100 rounded w-full bg-gradient-to-br from-gray-50 to-blue-50'>
+						<div className='mt-2 md:w-full md:mt-0 border border-gray-100 rounded w-full bg-gradient-to-br from-gray-50 to-gray-700'>
 							<div className='grid grid-cols-2 gap-4'>
 								<a className='bg-gray-700 border border-gray-300 rounded-lg mt-3 ml-3 md:mt-5 md:ml-4 pt-2 whitespace-normal' href='https://github.com/rubum'>
 									<span className='pl-3 pb-3 md:pb-1 flex items-center text-white'>
@@ -56,7 +58,7 @@ export default function About() {
 									<span className='pl-3 pb-3 md:pb-1 flex items-center text-white'>
 										<img src={timelineLogo} className="w-5 pr-2"></img><span className='font-medium'>Timeline</span>
 									</span>
-									<p className='hover:bg-gray-100 bg-white rounded-b-lg hidden md:block sm:block pt-3 pl-3 pb-3'>Currnt job as a full-stack engineer</p>
+									<p className='hover:bg-gray-100 bg-white rounded-b-lg hidden md:block sm:block pt-3 pl-3 pb-3'>Current job as a full-stack engineer</p>
 								</a>
 								<a className='bg-blue-800	border border-gray-300 rounded-lg mt-3 mb-3 mr-3 md:mt-5 md:mr-4 pt-2 whitespace-normal' href='https://valuechainfactory.com/'>
 									<span className='pl-3 pb-3 md:pb-1 flex items-center text-white'>
@@ -85,14 +87,14 @@ export default function About() {
 						as the former field was requiring.
 					</p>
 					<p className='text-white mt-3'>
-						This is my 5th year in tech and I've loved it all along. You can visit any of the links on the menu to see more on the
+						This is my 5th year in tech and I've loved it all along. You can click the links on the menu to find out more on the
 						<a className='text-blue-300 font-bold' href="/stack"> stack I use</a>, <a className='text-blue-300 font-bold' href="/portfolio">
 							a portfolio of projects I've worked on</a> and how to <a className='text-blue-300 font-bold' href="/contact">get in touch with me</a>.
 					</p>
 				</div>
 			</div>
-			<div className='bg-gray-600 pb-6'>
-					<hr className='p-2 text-gray-50' />
+			<div className='bg-gray-600 pb-56'>
+					<hr className='p-6 text-gray-50' />
 					<p className='text-white text-center'>&copy; 2022 Kenneth Mburu</p>
 				</div>
 		</div>
