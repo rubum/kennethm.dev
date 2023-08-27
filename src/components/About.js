@@ -25,9 +25,9 @@ export default function About() {
 					<div className='md:flex pt-3'>
 						<div className='md:w-full md:pr-2 text-normal'>
 							<p>
-							I am proficient in both frontend and backend development for web applications. My approach involves actively engaging with both aspects of the application. 
-							A practice I particularly appreciate is assuming the role of the primary user for the feature or application in development. This approach facilitates 
-							rigorous testing and refinement, resulting in a polished end product.
+								I collaboratively design and develop both the frontend and backend components of web applications, immersing 
+								myself in both facets of the application's architecture. An important approach in the development phase involves stepping into the shoes of the primary 
+								user to conduct exhaustive testing and iterative refinement, ultimately yielding a meticulously polished end product
 							</p>
 							<br />
 							<p>
@@ -95,7 +95,7 @@ export default function About() {
 			</div>
 			<div className='bg-gray-600 pb-56'>
 					<hr className='p-6 text-gray-50' />
-					<p className='text-white text-center'>&copy; 2022 Kenneth Mburu</p>
+					<p className='text-white text-center'>&copy; 2023 Kenneth Mburu</p>
 				</div>
 		</div>
 	)
